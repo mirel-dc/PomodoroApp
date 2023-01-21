@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">PomodoroApp</string>
+    <string name="Work">Work</string>
+    <string name="Chill">Chill</string>
+    <string name="Rest">Rest</string>
+    <string name="Complete_Task">Complete Task</string>
+    <string name="Reset">Reset</string>
+    <string name="one_of_four" tools:ignore="TypographyFractions">1/4</string>
+    <string name="Settings">Settings</string>
+    <string name="no_task">No specified task</string>
+    <string name="task">\Task: \</string>
+    <string name="time_on_clock">24 : 15</string>
+    <string name="skip">Skip</string>
+    <string name="todo_list">TODO List</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="settings">Settings</string>
+    <string name="focus_time">Focus time:</string>
+    <string name="chill_time">Chill time:</string>
+    <string name="long_break">Long Break:</string>
+    <string name="_25">25</string>
+    <string name="_5">5</string>
+    <string name="_15">15</string>
+    <string name="sound">Sound</string>
+    <string name="add">Add</string>
+
+</resources>

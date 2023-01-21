@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackWork"
+    tools:context=".MainActivity">
+
+
+    <!--    CURRENT TASK-->
+    <TextView
+        android:id="@+id/textTask"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Task: Make a design"
+ />
+
+    <!--    TIMER-->
+    <RelativeLayout
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="300sp"
+        android:layout_below="@id/textTask"
+        android:layout_marginHorizontal="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="timerBtn">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circle_work" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/textTime"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="@string/time_on_clock"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textState"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:layout_weight="1"
+                android:text="@string/Work" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    DOTES-->
+    <LinearLayout
+        android:id="@+id/dotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer"
+
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/dot11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+        <ImageView
+            android:id="@+id/dot12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+        <ImageView
+            android:id="@+id/dot13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+        <ImageView
+            android:id="@+id/dot14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+
+        <ImageView
+            android:id="@+id/dot21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+        <ImageView
+            android:id="@+id/dot22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+        <ImageView
+            android:id="@+id/dot23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+        <ImageView
+            android:id="@+id/dot24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/dot" />
+
+    </LinearLayout>
+
+    <!--    COMPLETE TASK-->
+    <TextView
+        android:id="@+id/completeTask"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dotes"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="completeTask"
+        android:paddingTop="25sp"
+        android:text="@string/Complete_Task" />
+
+    <!--    BOTTOM-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/completeTask"
+        android:paddingHorizontal="40dp"
+        android:paddingTop="20sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/textStateCounter"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/one_of_four" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="resetAll"
+                android:paddingVertical="10dp"
+                android:text="@string/Reset"
+                android:textColor="@color/text_dark" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:contentDescription="@string/skip"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="skip"
+            android:src="@drawable/skip_button" />
+
+    </RelativeLayout>
+
+    <!--    MENU-->
+    <LinearLayout
+        android:id="@+id/Menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/NavOffWork"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/IBTodoList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/todo_list"
+            android:onClick="goTodoList"
+            android:scaleType="centerInside"
+            android:src="@drawable/first_nav_work" />
+
+        <ImageButton
+            android:id="@+id/IBPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/NavOnWork"
+            android:contentDescription="@string/pomodoro"
+            android:scaleType="centerInside"
+            android:src="@drawable/second_nav_work" />
+
+        <ImageButton
+            android:id="@+id/IBSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/settings"
+            android:onClick="goSettings"
+            android:scaleType="centerInside"
+            android:src="@drawable/third_nav_work" />
+    </LinearLayout>
+
+</RelativeLayout>

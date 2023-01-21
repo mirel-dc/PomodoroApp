@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TODOList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackWork"
+    tools:context=".TodoList">
+
+    <TextView
+        android:id="@+id/textTodoList"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:text="@string/todo_list"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/add_item"
+        android:layout_below="@id/textTodoList"
+        android:layout_marginHorizontal="20sp"
+        android:paddingVertical="20sp">
+
+        <ListView
+            android:id="@+id/ListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/add_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/Menu"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="10sp">
+
+        <EditText
+            android:id="@+id/ET_add_item"
+            android:gravity="center"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:gravity="center"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="addItemToList"
+            android:text="@string/add"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+
+    <!--    MENU-->
+    <LinearLayout
+        android:id="@+id/Menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/NavOffWork"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/IBTodoList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/NavOnWork"
+            android:contentDescription="@string/todo_list"
+            android:scaleType="centerInside"
+            android:src="@drawable/first_nav_work" />
+
+        <ImageButton
+            android:id="@+id/IBPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/pomodoro"
+            android:onClick="goPomodoro"
+            android:scaleType="centerInside"
+            android:src="@drawable/second_nav_work" />
+
+        <ImageButton
+            android:id="@+id/IBSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/settings"
+            android:onClick="goSettings"
+            android:scaleType="centerInside"
+            android:src="@drawable/third_nav_work" />
+    </LinearLayout>
+
+</RelativeLayout>
